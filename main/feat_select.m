@@ -33,7 +33,7 @@ for g = 1:1:length(group);
     patients = eval(['Group_',group{g}]);
     for ii = 1:length(patients);
         mouse_stack=[];
-        load(['D:Radiomics_Mouse_Analysis\IBD_Mouse_MRIs\MHA\',patients{ii},'-Axial',post,'.mat']);
+        load(['D:\Radiomics_Mouse_Analysis\IBD_Mouse_MRIs\MHA\',patients{ii},'-Axial',post,'.mat']);
         alpha=find(SelSlices_grp{g}(ii,:)==1);
         t_featstats=featstats(which,:,:);
         [a,b,c]=size(t_featstats);
