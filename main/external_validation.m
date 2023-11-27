@@ -1,4 +1,4 @@
-addpath(genpath('G:\My Drive\Research\IBD_Mouse_MRIs'))
+addpath(genpath('D:\Radiomics_Mouse_Analysis\IBD_Mouse_MRIs\MHA\'))
 load('RadScores_Samp_FNCD.mat')
 load('FeatSelCDSAMP.mat')
 sel=[spval_feat{1}(1,:);spval_feat{2}(1,:);spval_feat{3}(1,:);spval_feat{4}(1,:);spval_feat{5}(1,:);spval_feat{6}(1,:)]
