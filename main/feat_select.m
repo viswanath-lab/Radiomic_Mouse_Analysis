@@ -33,14 +33,14 @@ for g = 1:1:length(group);
     patients = eval(['Group_',group{g}]);
     for ii = 1:length(patients);
         mouse_stack=[];
-        load(['C:\Users\pvc5\Google Drive\Research\IBD_Mouse_MRIs\Mat_PC\',patients{ii},'-Axial',post,'.mat']);
+        load(['D:Radiomics_Mouse_Analysis\IBD_Mouse_MRIs\MHA\',patients{ii},'-Axial',post,'.mat']);
         alpha=find(SelSlices_grp{g}(ii,:)==1);
         t_featstats=featstats(which,:,:);
         [a,b,c]=size(t_featstats);
         for ci=alpha
         trackmouse{end+1,1}=[patients{ii},num2str(ci)];
         end
-        t_stack=[,t_featstats(1,:,alpha),t_featstats(2,:,alpha),t_featstats(3,:,alpha),t_featstats(4,:,alpha)];
+        t_stack=[t_featstats(1,:,alpha),t_featstats(2,:,alpha),t_featstats(3,:,alpha),t_featstats(4,:,alpha)];
         t_stack=reshape(t_stack,[b*4,length(alpha)])';
         mouse_stack=[mouse_stack,t_stack];
         grp_stack=[grp_stack;mouse_stack];
@@ -52,7 +52,7 @@ for g = 1:1:length(group);
 end
 save('Sev2_Mouse_grp.mat','MStack_grp','trackmouse_grp')
 load('Sev2_Mouse_grp.mat')
-load('D:\Radiomics_Mouse_Analysis\classifiers\IBD_Mouse_MRIs\Mat_PC\822_1lp-Axial_PC.mat')
+load('D:\Radiomics_Mouse_Analysis\IBD_Mouse_MRIs\Mat_PC\822_1lp-Axial_PC.mat')
 Max=MStack_grp{2};
 Min=MStack_grp{3};
 % stk=[Max;Min]
@@ -191,7 +191,7 @@ trackmouse_grp={};
        
     for ii = 1:length(patients);
         mouse_stack=[];
-        load(['G:\My Drive\Research\IBD_Mouse_MRIs\Mat_PC\',patients{ii},'-Axial',post,'.mat']);
+        load(['D:\Radiomics_Mouse_Analysis\IBD_Mouse_MRIs\Mat_PC\',patients{ii},'-Axial',post,'.mat']);
         
         t_featstats=featstats(which,:,:);
         [a,b,c]=size(t_featstats);
@@ -199,7 +199,7 @@ trackmouse_grp={};
         trackmouse{end+1,1}=[patients{ii},'-',num2str(ci)];
         trackmouse{end,2}=[featstats(4,102,ci)];
         end
-         t_stack=[,t_featstats(1,:,:),t_featstats(2,:,:),t_featstats(3,:,:),t_featstats(4,:,:)];
+         t_stack=[t_featstats(1,:,:),t_featstats(2,:,:),t_featstats(3,:,:),t_featstats(4,:,:)];
         t_stack=reshape(t_stack,[b*length(which),c])';
         mouse_stack=[mouse_stack,t_stack];
         grp_stack=[grp_stack;mouse_stack];
@@ -230,7 +230,7 @@ trackmouse_grp={};
        
     for ii = 1:length(patients);
         mouse_stack=[];
-        load(['G:\My Drive\Research\IBD_Mouse_MRIs\Mat_PC\',patients{ii},'-Axial',post,'.mat']);
+        load(['D:\Radiomics_Mouse_Analysis\IBD_Mouse_MRIs\Mat_PC\',patients{ii},'-Axial',post,'.mat']);
         
         t_featstats=featstats(which,:,:);
         [a,b,c]=size(t_featstats);
@@ -238,7 +238,7 @@ trackmouse_grp={};
         trackmouse{end+1,1}=[patients{ii},'-',num2str(ci)];
         trackmouse{end,2}=[featstats(4,102,ci)];
         end
-         t_stack=[,t_featstats(1,:,:),t_featstats(2,:,:),t_featstats(3,:,:),t_featstats(4,:,:)];
+         t_stack=[t_featstats(1,:,:),t_featstats(2,:,:),t_featstats(3,:,:),t_featstats(4,:,:)];
         t_stack=reshape(t_stack,[b*length(which),c])';
         mouse_stack=[mouse_stack,t_stack];
         grp_stack=[grp_stack;mouse_stack];
