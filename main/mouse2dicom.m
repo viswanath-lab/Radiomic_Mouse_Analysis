@@ -7,7 +7,7 @@ addpath(genpath('D:\Radiomics_Mouse_Analysis\image_functions'))
 dirPath='D:\Radiomics_Mouse_Analysis\IBD_Mouse_MRIs\Dicom';
 cd('D:\Radiomics_Mouse_Analysis\IBD_Mouse_MRIs\MHA')
 
-Path{1}='D:Radiomics_Mouse_Analysis\IBD_Mouse_MRIs\Dicom\';%Path to data one for each specific subpath
+Path{1}='D:\Radiomics_Mouse_Analysis\IBD_Mouse_MRIs\Dicom\';%Path to data one for each specific subpath
 for i=1
     cd(Path{i});
     temp=dir(Path{i});
