@@ -22,3 +22,9 @@ Feature_Extraction: Contains the code for each of the featue sets extracted in t
 
 image functions: This folder contains the code needed to convert an image to mha as well as handles generating some additional plots and figures used in the study
 
+# Citation
+
+This code was utilized as part of analysis done for the following paper:
+
+Maneesh Dave, Atul Dev, Rodrigo A Somoza, Nan Zhao, Satish E Viswanath, Pooja Rani Mina, Prathyush Chirra, Verena Carola Obmann, Ganapati H Mahabeleshwar, Paola Menghini, Blythe Durbin-Johnson, Jan Nolta, Christopher Soto, Abdullah Osme, Lam T Khuat, William J Murphy, Arnold I Caplan, Fabio Cominelli, "MSCs mediate long-term efficacy in a Crohn's disease model by sustained anti-inflammatory macrophage programming via efferocytosis", NPJ Regen Med. 2024 Jan 20;9(1):6.  doi: 10.1038/s41536-024-00347-1.
+
